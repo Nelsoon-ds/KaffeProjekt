@@ -8,9 +8,9 @@ class CoffeeMachine {
 
     public CoffeeMachine() {
         drinks = new ArrayList<>();
-        drinks.add(new ChocolateDrink("Chocolate Drink"));
+        drinks.add(new ChocolateDrink("Chocolate Drink", false));
         drinks.add(new Espresso("Espresso"));
-        drinks.add(new Coffee("Coffee"));
+        drinks.add(new Coffee("Coffee", false));
         // TODO: Tilføj forskellige drikke til listen
         // TODO: Tilføj Espresso og ChocolateDrink
     }
@@ -24,7 +24,7 @@ class CoffeeMachine {
         // TODO: Loop igennem drinks-listen
         for(Drink d : drinks){
             if(d.getName().equalsIgnoreCase(drinkName)){
-                d.serve();
+                d.serve(size, false);
             }
         }
         // TODO: Tjek om navnet matcher (ignoreCase)

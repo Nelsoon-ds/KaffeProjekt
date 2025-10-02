@@ -4,9 +4,10 @@ package CoffeeProject;
 public class CoffeeMachineTest {
     public static void main(String[] args) {
         // TODO: Opret en CoffeeMachine
+        CoffeeMachine machine = new CoffeeMachine();
+        machine.listDrinks();
 
         // TODO: Sorter og udskriv alle drikke
-
         // TODO: Server forskellige drikke og udskriv Cups
         // Eksempel:
         // Cup cup1 = machine.serveDrink("Sort kaffe", Size.MEDIUM, false);

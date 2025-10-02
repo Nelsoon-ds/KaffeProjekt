@@ -8,10 +8,18 @@ package CoffeeProject;
  */
 abstract class Drink implements Comparable<Drink> {
 
-    private String name; // TODO: Overvej om dette skal være private med getter/setter
+    protected String name; // TODO: Overvej om dette skal være private med getter/setter
+    protected boolean whippedCream = false;
 
-    public Drink(String name) {
+    public Drink(String name, boolean whippedCream) {
         this.name = name;
+        this.whippedCream = whippedCream;
+    }
+
+    // compareTo implementeres her i superklassen
+    public int compareTo(Drink d1){
+        return this.name.compareToIgnoreCase(d1.name);
+
     }
 
     /*
@@ -26,12 +34,6 @@ abstract class Drink implements Comparable<Drink> {
     public String getName() {
         return name;
     }
-
-    // TODO: Implementér compareTo() for alfabetisk sortering af drikke
-    public int compareTo(Drink d1, Drink d2) {
-            return  d1.getName().compareTo(d2.getName());
-        }
-
     // TODO: Implementér toString() til at vise drikkens navn
     public String toString() {
     return "Drink name: " + name;

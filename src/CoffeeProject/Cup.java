@@ -3,31 +3,25 @@ package CoffeeProject;
 // Cup-klasse – eksempel på encapsulation
 class Cup {
     // TODO: private felter: drinkName, size, whippedCream
-    private String drinkName;
+    private String name;
     private Size size;
-    private boolean hasWhippedCream;
 
     // TODO: Lav constructor, der initialiserer felterne
 
-    public Cup(String drinkName, Size size, boolean hasWhippedCream) {
-        this.drinkName = drinkName;
+    public Cup(String drinkName, Size size) {
+        this.name = drinkName;
         this.size = size;
-        this.hasWhippedCream = hasWhippedCream;
     }
 
 
     // TODO: Implementér getters for alle felter
 
-    public String getDrinkName() {
-        return drinkName;
+    public String getName() {
+        return name;
     }
 
     public Size getSize() {
         return size;
-    }
-
-    public boolean getHasWhippedCream() {
-        return hasWhippedCream;
     }
 
 
@@ -36,5 +30,5 @@ class Cup {
 
     @Override
     public String toString() {
-        return "Name: " + drinkName + "\t" + "Size = "+ size +"\t"+ "Has whippedCream = " + hasWhippedCream;
-}
+        return "Name: " + name + "\t" + "Size = "+ size +"\t"+ "Has whippedCream = ";
+}}
