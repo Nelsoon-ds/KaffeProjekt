@@ -3,6 +3,7 @@ package CoffeeProject;
 // ChocolateDrink subklasse – polymorfi
 class ChocolateDrink extends Drink {
 private boolean whippedCream;
+
     public ChocolateDrink(String name, boolean whippedCream) {
         super(name);
         this.whippedCream = whippedCream;

@@ -2,16 +2,16 @@ package CoffeeProject;
 
 // Coffee subklasse – polymorfi
 class Coffee extends Drink {
-    public Coffee(String name, Size size) {
+    public Coffee(String name) {
         super(name);
-        this.size = size;
         // TODO: kald super constructor
     }
-    // compareTo implementeres her i superklassen
+
     @Override
-    public Cup serve(Size size, boolean whippedCream) {
-        // TODO: Coffee kan have størrelser, men ikke flødeskum
-        // TODO: Returner en Cup med korrekt navn og størrelse
-        return null; // TODO: Erstat null med faktisk Cup
+    public Cup serve(Size size) {
+
+        Cup Coffe = new Cup(name, size);
+        return Coffe;
+        // TODO: Returner en Cup med navnet, størrelse
     }
 }
