@@ -2,10 +2,12 @@ package CoffeeProject;
 
 // ChocolateDrink subklasse – polymorfi
 class ChocolateDrink extends Drink {
-    public ChocolateDrink(String name) {
-        super(name); // TODO: kald super constructor
-    }
+    private boolean whippedCream;
 
+    public ChocolateDrink(String name, boolean whippedCream) {
+        super(name); // TODO: kald super constructor
+        this.whippedCream = whippedCream;
+    }
 
 
     // compareTo implementeres her i superklassen
@@ -16,8 +18,8 @@ class ChocolateDrink extends Drink {
     }
     @Override
     public Cup serve(Size size, boolean whippedCream) {
-        // TODO: ChocolateDrink kan tilføje flødeskum
+        return "drink type: " + name + size + (whippedCream? "yes" : "no");
+        // TODO: ChocolateDrink kan tilføje
         // TODO: Returner en Cup med navnet, størrelse og flødeskum
-        return null;
     }
 }
