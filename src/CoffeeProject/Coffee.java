@@ -2,8 +2,10 @@ package CoffeeProject;
 
 // Coffee subklasse – polymorfi
 class Coffee extends Drink {
-    public Coffee(String name, boolean whippedCream) {
-        super(name, whippedCream); // TODO: kald super constructor
+    public Coffee(String name, Size size) {
+        super(name);
+        this.size = size;
+        // TODO: kald super constructor
     }
     // compareTo implementeres her i superklassen
     @Override

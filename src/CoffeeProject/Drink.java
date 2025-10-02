@@ -9,11 +9,9 @@ package CoffeeProject;
 abstract class Drink implements Comparable<Drink> {
 
     protected String name; // TODO: Overvej om dette skal være private med getter/setter
-    protected boolean whippedCream = false;
 
-    public Drink(String name, boolean whippedCream) {
+    public Drink(String name) {
         this.name = name;
-        this.whippedCream = whippedCream;
     }
 
     // compareTo implementeres her i superklassen

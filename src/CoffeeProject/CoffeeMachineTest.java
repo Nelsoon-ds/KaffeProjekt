@@ -7,6 +7,7 @@ public class CoffeeMachineTest {
         CoffeeMachine machine = new CoffeeMachine();
         machine.listDrinks();
 
+
         // TODO: Sorter og udskriv alle drikke
         // TODO: Server forskellige drikke og udskriv Cups
         // Eksempel:
