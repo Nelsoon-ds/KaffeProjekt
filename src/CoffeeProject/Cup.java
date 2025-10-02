@@ -14,6 +14,9 @@ class Cup {
         this.size = size;
         this.whippedCream = whippedCream;
     }
+    public Cup(String drinkName) {
+        this.name = drinkName;
+    }
 
 
     // TODO: Implementér getters for alle felter

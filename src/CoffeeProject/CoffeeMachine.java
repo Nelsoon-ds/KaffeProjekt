@@ -1,8 +1,5 @@
 package CoffeeProject;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 // Kaffemaskine klasse – aggregation
 class CoffeeMachine {
@@ -13,33 +10,58 @@ class CoffeeMachine {
         // TODO: Tilføj forskellige drikke til listen
         // TODO: Tilføj Espresso og ChocolateDrink
     }
+    // TODO: Loop igennem drinks-listen
 
     /*
      * Serve en drik
      * - Søger i listen efter navn
      * - Kalder serve() på den rigtige drik
      */
-    public Cup serveDrink(String drinkName, Size size, boolean whippedCream) {
-        // TODO: Loop igennem drinks-listen
+    public Cup serveDrink(String drinkName) {
+// Få tjekket om det er en espresso
+        if (drinkName.equalsIgnoreCase("espresso"))  {
+            System.out.println("Creating a drink with name: " + drinkName);
+            return new Cup (drinkName);
+        }
+        if (drinkName.equalsIgnoreCase("double espresso")) {
+            System.out.println("Creating a drink with name: " + drinkName);
+            return new Cup (drinkName);
+        }
+        if (drinkName.equalsIgnoreCase("triple espresso")){
+            System.out.println("Creating a drink with name: " + drinkName);
+            return new Cup (drinkName);
+        }
 
+        Scanner scan = new Scanner(System.in);
 
+        System.out.println("First, what size would you like to order?");
+        Size size = Size.valueOf(scan.nextLine().toUpperCase());
+        System.out.println("Do you take cream?");
+        String userWantsWhippedCream = scan.next();
+        boolean whippedCream = false;
 
-
+        if (userWantsWhippedCream.equalsIgnoreCase("yes")) {
+             whippedCream = true;
+        }
 
         for(Drink d : drinks){
+            System.out.println(d);
             if (d.getName().equalsIgnoreCase(drinkName)) {
-                return new Cup(drin)
+               System.out.println("inner loop" + drinkName);
             }
+
         }
+        Cup userDrink = new Cup(drinkName, size, whippedCream);
+        System.out.println(userDrink);
+        return userDrink;
         // TODO: Tjek om navnet matcher (ignoreCase)
         // TODO: Returner resultatet af serve()
         // TODO: Håndter hvis drikken ikke findes
     }
 
-    private getUserInput() {
+    private String getUserInput() {
         Scanner scan = new Scanner(System.in);
-        scan.next();
-
+        return scan.next();
     }
 
     // TODO: sortDrinks() – sorter alfabetisk via Comparable

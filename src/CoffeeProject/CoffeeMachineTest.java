@@ -33,7 +33,7 @@ public class CoffeeMachineTest {
         // TODO: Overvej at tilføje brugerinput med Scanner til dynamisk bestilling
 
     }
-    public static void orderDrinks() {
+    public static void orderDrinks() throws NumberFormatException {
         // Lets get a welcome speak first
         CoffeeMachine machine = new CoffeeMachine();
         Scanner scan = new Scanner(System.in);
@@ -45,14 +45,27 @@ public class CoffeeMachineTest {
                 switch (userInput) {
                     // First is espresso
                     case 1:
-                        machine.serveDrink("Espresso", null, false);
+                        machine.serveDrink("Chocolate Drink");
+                        break;
+                    case 2:
+                        machine.serveDrink("Chocolate Milk");
+                        break;
+                    case 3:
+                        machine.serveDrink("Espresso");
+                        break;
+                    case 4:
+                        machine.serveDrink("Double Espresso");
+                        break;
+                    case 5:
+                        machine.serveDrink("Triple Espresso");
                         break;
 
                 }
             }
             // Lets throw an unchecked exception
-            catch (InputMismatchException e) {
-                throw new RuntimeException(e + "You fucked up homie");
+            catch (NumberFormatException e) {
+                e.printStackTrace();
+                System.out.println("You have inputted a string which cannot be converted to an integer. Please try again");
             }
 
         }
