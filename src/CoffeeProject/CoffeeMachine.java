@@ -8,8 +8,10 @@ class CoffeeMachine {
 
     public CoffeeMachine() {
         drinks = new ArrayList<>();
+        drinks.add(new ChocolateDrink("Chocolate Drink"));
+        drinks.add(new Espresso("Espresso"));
+        drinks.add(new Coffee("Coffee"));
         // TODO: Tilføj forskellige drikke til listen
-        // Eksempel: drinks.add(new Coffee("Sort kaffe"));
         // TODO: Tilføj Espresso og ChocolateDrink
     }
 
@@ -20,6 +22,11 @@ class CoffeeMachine {
      */
     public Cup serveDrink(String drinkName, Size size, boolean whippedCream) {
         // TODO: Loop igennem drinks-listen
+        for(Drink d : drinks){
+            if(d.getName().equalsIgnoreCase(drinkName)){
+                d.serve();
+            }
+        }
         // TODO: Tjek om navnet matcher (ignoreCase)
         // TODO: Returner resultatet af serve()
         // TODO: Håndter hvis drikken ikke findes
