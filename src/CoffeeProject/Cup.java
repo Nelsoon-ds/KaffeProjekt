@@ -5,12 +5,14 @@ class Cup {
     // TODO: private felter: drinkName, size, whippedCream
     private String name;
     private Size size;
+    private boolean whippedCream;
 
     // TODO: Lav constructor, der initialiserer felterne
 
-    public Cup(String drinkName, Size size) {
+    public Cup(String drinkName, Size size, boolean whippedCream) {
         this.name = drinkName;
         this.size = size;
+        this.whippedCream = whippedCream;
     }
 
 
@@ -30,5 +32,5 @@ class Cup {
 
     @Override
     public String toString() {
-        return "Name: " + name + "\t" + "Size = "+ size +"\t"+ "Has whippedCream = ";
+        return "Name: " + name + "\t" + "Size = "+ size +"\t"+ "Has whippedCream = " + whippedCream;
 }}

@@ -9,10 +9,8 @@ class Espresso extends Drink {
 
     @Override
     public Cup serve(Size size, boolean whippedCream) {
-        Cup espresso = new Cup(name, Size.SMALL);
-
         // TODO: Espresso har fast størrelse – size ignoreres
         // TODO: Returner en Cup med navn, ingen size og uden flødeskum
-        return espresso;
+        return new Cup("Espresso", null, false);
     }
 }

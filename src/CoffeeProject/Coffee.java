@@ -8,10 +8,9 @@ class Coffee extends Drink {
     }
 
     @Override
-    public Cup serve(Size size) {
+    public Cup serve(Size size, boolean whippedCream) {
 
-        Cup Coffe = new Cup(name, size);
-        return Coffe;
+        return new Cup(name, size, false);
         // TODO: Returner en Cup med navnet, størrelse
     }
 }

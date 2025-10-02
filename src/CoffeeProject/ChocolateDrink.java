@@ -13,8 +13,6 @@ private boolean whippedCream;
     @Override
     public Cup serve(Size size, boolean whippedCream) {
 
-        Cup chocolateDrink = new Cup(name, size);
-        return chocolateDrink;
-        // TODO: Returner en Cup med navnet, størrelse og flødeskum
+        return new Cup(name, size, whippedCream);
     }
 }
