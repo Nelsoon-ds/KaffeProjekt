@@ -20,6 +20,8 @@ abstract class Drink implements Comparable<Drink> {
 
     }
 
+
+
     /*
      * Polymorf metode serve
      * - Skal implementeres forskelligt i subklasser
