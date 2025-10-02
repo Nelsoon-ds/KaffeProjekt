@@ -36,4 +36,9 @@ class CoffeeMachine {
     // TODO: sortDrinks() – sorter alfabetisk via Comparable
 
     // TODO: listDrinks() – udskriv alle drikke til konsol
+    public void listDrinks(){
+        for(Drink d : drinks){
+            System.out.println(d);
+        }
+    }
 }
