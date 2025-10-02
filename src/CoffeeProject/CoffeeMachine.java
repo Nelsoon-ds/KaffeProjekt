@@ -9,7 +9,7 @@ class CoffeeMachine {
     public CoffeeMachine() {
         drinks = new ArrayList<>();
         drinks.add(new ChocolateDrink("Chocolate Drink", false));
-        drinks.add(new Espresso("Espresso"));
+        drinks.add(new Espresso("Espresso", false));
         drinks.add(new Coffee("Coffee", false));
         // TODO: Tilføj forskellige drikke til listen
         // TODO: Tilføj Espresso og ChocolateDrink
